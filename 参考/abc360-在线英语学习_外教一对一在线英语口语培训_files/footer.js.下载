@@ -1,0 +1,123 @@
+/*! abc360 version: 0.1.3 | 2016-06-03*/
+$(function() {
+	FooterFun()
+});
+var FooterFun = function() {
+		$("#header .navbar-right>ul>li").eq($("body").attr("data-page")).addClass("active"), $("#top .t-3").on("click", function() {
+			$(/webkit/.test(navigator.userAgent.toLowerCase()) ? "body" : "html").animate({
+				scrollTop: 0
+			}, "slow")
+		}), AllFunction()
+	},
+	AddScript = function(a) {
+		var b = document.createElement("script");
+		b.type = "text/javascript", b.src = a, document.getElementsByTagName("body")[0].appendChild(b)
+	},
+	ShowVideo = function() {
+		$(".show-video").on("click", function(a) {
+			if (a.preventDefault(), $("html").hasClass("oldie")) $(".modal-body video").html("您没有安装flash插件，无法播放视频，请使用更高版本浏览器浏览。");
+			else {
+				var b = $($(this).attr("data-target"));
+				b.find("video").attr("src", $(this).attr("data-video")), b.find("video").trigger("play")
+			}
+		}), $(".modal-v").on("hide.bs.modal", function() {
+			$(this).find("video").trigger("pause")
+		})
+	},
+	AllFunction = function() {
+		var a = $("body").attr("data-page");
+		if ($("html").hasClass("oldie") || (new WOW).init(), $("input").placeholder(), 1 == a) {
+			$("#top").addClass("youthcode");
+			var b = {
+				count1: null,
+				count2: null,
+				count3: null,
+				count4: null
+			};
+			b.count1 = new CountUp("count1", 0, 1339, 0, 2.5), b.count2 = new CountUp("count2", 0, 99, 0, 2.5), b.count3 = new CountUp("count3", 0, all_reg_num, 0, 2.5), b.count4 = new CountUp("count4", 0, day_reg_num, 0, 2.5)
+		}
+		1 != a && 2 != a && 3 != a && 5 != a || ShowVideo(), $(window).scroll(function() {
+			var b = $(".section2"),
+				c = b.position().top,
+				e = $("#footer").position().top,
+				f = $(".section-f1").height(),
+				g = $(window).height();
+			$(window).scrollTop() >= c ? $(".navbar").addClass("navbar-min") : $(".navbar").removeClass("navbar-min"), $(window).scrollTop() >= e - g + f ? $("#footer .section-f1").removeClass("section-f1-fix") : $("#footer .section-f1").addClass("section-f1-fix"), 1 == a && d()
+		});
+		var c = 2 == a ? 8e3 : 4e3;
+		$(".flexslider").flexslider({
+			animation: "fade",
+			slideshow: !0,
+			slideshowSpeed: c,
+			animationDuration: 600,
+			directionNav: !0,
+			slideToStart: 0,
+			pauseOnHover: !1,
+			touch: !0
+		}), $("#main .section7 .span-tab").mouseover(function(a) {
+			$(this).attr("class").indexOf("tab-active") && ($("#main .section7 .span-tab,#main-a .section2 .span-tab").removeClass("tab-active"), $(this).addClass("tab-active"), $(".section7 .tab1,.section7 .tab2,#main-a .section2 .tab1,#main-a .section2 .tab2").hide(), $($(this).attr("data-target")).show())
+		});
+		var d = function() {
+				var a = $("#main-y .section6"),
+					c = a.position().top;
+				$(window).scrollTop() >= c - $(window).height() + a.height() && (b.count1.start(), b.count2.start(), b.count3.start(), b.count4.start())
+			}
+	},
+	getQueryString = function(a) {
+		var b = new RegExp("(^|&)" + a + "=([^&]*)(&|$)", "i"),
+			c = window.location.search.substr(1).match(b);
+		return null != c ? unescape(c[2]) : null
+	};
+jQuery.fn.aPosition = function() {
+	return thisTop = this.offset().top, thisParent = this.closest(".sections"), parentTop = thisParent.offset().top, {
+		top: thisTop - parentTop
+	}
+}, !
+function(a) {
+	a.fn.extend({
+		placeholder: function(b) {
+			return b = a.extend({
+				placeholderColor: "#999",
+				isUseSpan: !0,
+				onInput: !0
+			}, b), a(this).each(function() {
+				var c = this,
+					d = "placeholder" in document.createElement("input");
+				if (!d) {
+					var e = a(c).attr("placeholder"),
+						f = a(c).css("color");
+					if (0 == b.isUseSpan) a(c).focus(function() {
+						var b = new RegExp("^" + e + "$|^$");
+						b.test(a(c).val()) && a(c).val("").css("color", f)
+					}).blur(function() {
+						a(c).val() == e ? a(c).css("color", f) : 0 == a(c).val().length && a(c).val(e).css("color", b.placeholderColor)
+					}).trigger("blur");
+					else {
+						var g = a('<span class="wrap-placeholder" style="position:absolute; display:inline-block; overflow:hidden; color:' + b.placeholderColor + "; width:" + a(c).outerWidth() + "px; height:" + a(c).outerHeight() + 'px;">' + e + "</span>");
+						if (g.css({
+							"margin-left": a(c).css("margin-left"),
+							"margin-top": a(c).css("margin-top"),
+							"font-size": a(c).css("font-size"),
+							"font-family": a(c).css("font-family"),
+							"font-weight": a(c).css("font-weight"),
+							"padding-left": parseInt(a(c).css("padding-left")) + 2 + "px",
+							"line-height": "textarea" == c.nodeName.toLowerCase() ? a(c).css("line-weight") : a(c).outerHeight() + "px",
+							"padding-top": "textarea" == c.nodeName.toLowerCase() ? parseInt(a(c).css("padding-top")) + 2 : 0
+						}), a(c).before(g.click(function() {
+							a(c).trigger("focus")
+						})), 0 != a(c).val().length && g.hide(), b.onInput) {
+							var h = "object" == typeof c.oninput ? "input" : "propertychange";
+							a(c).bind(h, function() {
+								g[0].style.display = 0 != a(c).val().length ? "none" : "inline-block"
+							})
+						} else a(c).focus(function() {
+							g.hide()
+						}).blur(function() {
+							/^$/.test(a(c).val()) && g.show()
+						})
+					}
+				}
+			}), this
+		}
+	})
+}(jQuery); /*End JS*/

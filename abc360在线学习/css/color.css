@@ -1,0 +1,174 @@
+/*topbar部分*/
+.topbar {
+	background-color: #2c2c2c;
+	color: #fff;
+}
+.topbar-menu .topleft-bar li,.topbar-menu a,.topright-bar li a:hover  {
+	color: #ccc;
+}
+.topbar-menu a:hover,.topright-bar li a {
+	color: #fff;
+}
+.topright-bar > a{
+	color: #999;
+}
+/*nav部分*/
+.navbar li a {
+	color: #292929;
+}
+.navbar li a:hover,.navbar .active a {
+	border-bottom: 3px solid #0084ce;
+	background-color: #fff;
+	color: #292929;
+}
+.navbar .navbar-right ul li span.btn-b {
+	background-color: #0084ce;
+	color: #fff;
+	border: 1px solid #0084ce;
+}
+.navbar .navbar-right ul li span.btn-b:hover {
+	background-color: #fff;
+	color: #0084ce;
+}
+/*wrap部分*/
+/*轮播图*/
+.focus-num-wrap .focus-num li {
+	background-color: rgba(255,255,255,.7);
+	color: #333;
+}
+.focus-num-wrap .focus-num li.active,.focus-num-wrap .focus-num li:hover {
+	color: rgb(0,132,206,.9);
+	background: rgba(0,132,206,.9);
+}
+.focus-num-wrap .focus-num li:hover{
+	background: rgba(0,132,206,.3);
+}
+.fa-chevron-left,.fa-chevron-right {
+	color: rgba(0,0,0,.8);
+}
+/*section共有部分*/
+.s-line {
+	background-color: #0084ce;
+}
+.section .btn-b {
+	color: #0084ce;
+	border: 1px solid #0084ce;
+}
+.section .btn-b:hover {
+	background-color: #0084ce;
+	color: #fff;
+}
+.section1,.section3,.section5,.section8 {
+	background-color: #ebebeb;
+}
+/*section1*/
+.wrap .section1 .container .sec1 span:last-child {
+	background-color: #fff;
+	color: #7b7b7b;
+}
+.wrap .section1 .container .sec1 span:first-child i:last-child {
+	background-color: #000;
+}
+/*section3*/
+.section3 .sec3 {
+	background-color: #fff;
+	color: #333;
+}
+.section3 .sec3 p {
+	color: #666;
+}
+/*section4*/
+.section4 .s4-text {
+	background-color: #15abe8;
+	color: #fff;
+}
+/*section5*/
+.section5 .s5-box .text-bg {
+	background-color: #fff;
+	color: #515151;
+}
+.section5 .s5-box .name-icon p {
+	 color: #333;
+}
+.section5 .s5-box .name-icon span {
+    color: #666;
+}
+/*section6*/
+.section6 h2 {
+	color: #fff;
+}
+.section6 .btn-b {
+	border-color: #fff;
+	color:#fff;
+}
+.section6 .btn-b:hover {
+	border-color: #0098d7;
+}
+.s6-btn {
+	background: #0084ce;
+    color: #fff;
+}
+/*section7*/
+.section7 .span-tab{
+	color: #757575;
+}
+.section7 .tab-active{
+	color: #000;
+}
+/*section8*/
+.col-name {
+	background: #fff;
+}
+.col-name:hover {
+	background: #0071c3;
+}
+/*footer部分*/
+#footer .section-f1 {
+	background-color: rgba(0,0,0,0.7);
+	color: #fff;
+}
+input[type=text],input[type=password] {
+	background-color: #fff;
+	color: #444;
+}
+#footer .btn-b {
+	background-color: #0084ce;
+	color: #fff;
+}
+#footer .btn-f:hover {
+	color: #0084ce;
+	background: none;
+	border: 1px solid #0084ce;
+}
+#footer .section-f2 ul li a{
+	color: #878787; 
+}
+#footer .section-f2 a:hover {
+	color: #fff;
+}
+#footer .section-f2 .link-more span {
+	color: #878787;
+}
+#footer .section-f2 .link-more span:hover {
+	color: #fff;
+}
+#footer .section-f3 {
+	background-color: #181818;
+	color: #7b7b7b;
+}
+#footer .section-f3 .f-right span a {
+	color: #7b7b7b;
+}
+#footer .section-f3 .f-right span a:hover {
+	color: #fff;
+}
+#top ul li a {
+	background-color: #0084ce;
+	 color: #fff;
+}
+#top ul li a:hover {
+	background-color: #fff;
+}
+#top ul li a:hover i,#top ul li a:hover b {
+	color: #0084ce;
+}

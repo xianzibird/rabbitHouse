@@ -1,0 +1,1 @@
+sinaSSOController.autoLoginCallBack3({"retcode":"6102","reason":""});

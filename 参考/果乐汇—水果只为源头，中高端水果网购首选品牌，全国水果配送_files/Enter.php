@@ -1,0 +1,1 @@
+QIAO_NS_BSL.handleEnter({"bid":"1b0c070c308e541262fa90c8", "wordid":0, "word":"果乐汇", "from":"广东深圳", "wordtype":1, "lv":1, "lvp":1, "ftime":1481160535, "ltime":1481160535, "service_type":0, "zhixin":"", "saved":1, "time":1481160535, "group":[{"groupid":0, "groupname":"默认分组", "user":[{"subid":0, "islogin":0, "groupid":0, "subname":" "}]}]});

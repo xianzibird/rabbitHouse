@@ -1,0 +1,32 @@
+html, body {
+    font-family: "微软雅黑", Helvetica, 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+}
+.clearfloat {
+	zoom:1;/*IE浏览器上清除浮动*/
+}
+/*其他浏览器上清除浮动*/
+.clearfloat:after {
+display: block;
+clear: both;
+content: "";
+visibility: hidden;
+height: 0;
+}
+a{
+	color: #333;
+}
+a:focus,a:hover{
+	text-decoration: none;
+	color: #1e89e0;
+}
+em{
+	font-style: normal;
+}
+li{
+	list-style: none;
+}
+ul,li{
+	padding: 0;
+	margin: 0;
+}
